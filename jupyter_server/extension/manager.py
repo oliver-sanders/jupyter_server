@@ -357,7 +357,6 @@ class ExtensionManager(LoggingConfigurable):
 
     def stop_extension(self, name, apps):
         """Call the shutdown hooks in the specified apps."""
-        self.log.debug('stopping extension: {name}'.format(name=name))
         for app in apps:
             if hasattr(app, 'stop_extension'):
                 app.stop_extension()

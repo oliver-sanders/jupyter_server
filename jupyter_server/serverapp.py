@@ -1923,6 +1923,13 @@ class ServerApp(JupyterApp):
 
     def cleanup_extensions(self):
         """Call shutdown hooks in all extensions."""
+        n_extensions = len(self.extension_manager.extension_apps)
+        extension_msg = trans.ngettext(
+            'Shutting down %d extension',
+            'Shutting down %d extensions',
+            n_extensions
+        )
+        self.log.info(extension_msg % n_extensions)
         self.extension_manager.stop_all_extensions(self)
 
     def running_server_info(self, kernel_count=True):

@@ -174,7 +174,10 @@ class ExtensionApp(JupyterApp):
 
     @classmethod
     def get_extension_package(cls):
-        return cls.__module__.split('.')[0]
+        parts = cls.__module__.split('.')
+        if '(namespace)' not in str(__import__(parts[0])):
+            return parts[0]
+        return '.'.join(parts[0:2])
 
     @classmethod
     def get_extension_point(cls):
