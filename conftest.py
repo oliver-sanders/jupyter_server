@@ -1,13 +1,8 @@
 import pytest
 
-
 pytest_plugins = [
     "jupyter_server.pytest_plugin"
 ]
-
-
-import pytest
-
 
 def pytest_addoption(parser):
     parser.addoption(
