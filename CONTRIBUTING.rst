@@ -89,7 +89,7 @@ Install dependencies::
 
 To run the Python tests, use::
 
-    pytest
+    pytest jupyter_server
     pytest examples/simple  # to test the examples
 
 Building the Docs
