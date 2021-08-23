@@ -1,5 +1,6 @@
 # Jupyter Server
 
+
 [![Build Status](https://github.com/jupyter/jupyter_server/workflows/CI/badge.svg?query=branch%3Amaster++)](https://github.com/jupyter-server/jupyter_server/actions?query=branch%3Amaster++)
 [![Documentation Status](https://readthedocs.org/projects/jupyter-server/badge/?version=latest)](http://jupyter-server.readthedocs.io/en/latest/?badge=latest)
 
